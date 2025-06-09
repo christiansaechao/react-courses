@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "[!w]*/**": true,
+    "w[!e]*/**": true,
+    "we[!e]*/**": true,
+    "wee[!k]*/**": true,
+    "week[!-]*/**": true,
+    "week-[!6]*/**": true,
+    "week-6/[!s]*/**": true,
+    "week-6/s[!h]*/**": true,
+    "week-6/sh[!a]*/**": true,
+    "week-6/sha[!d]*/**": true,
+    "week-6/shad[!c]*/**": true,
+    "week-6/shadc[!n]*/**": true,
+    "week-6/shadcn[!-]*/**": true,
+    "week-6/shadcn-[!s]*/**": true,
+    "week-6/shadcn-s[!e]*/**": true,
+    "week-6/shadcn-se[!t]*/**": true,
+    "week-6/shadcn-set[!u]*/**": true,
+    "week-6/shadcn-setu[!p]*/**": true
+  }
+}
