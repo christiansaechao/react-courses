@@ -1,0 +1,19 @@
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 10 px 15px;
+}
+.logo {
+  height: 40px;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    gap:20px;
+}
+
+.logo {
+  height: 40px;
+}
