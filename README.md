@@ -2,7 +2,7 @@
 
 - Exercices
 - Week 1
-  - Goal tracker app (useState, props, components)
+  - Building components (useState, props, components)
   - Shop inventory (useState, props, components)
 - Week 2
   - Crypto chart (useEffect, useState)

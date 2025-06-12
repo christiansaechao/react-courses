@@ -23,18 +23,7 @@ const contentRef = React.useRef(null);
 
   return (
     <>
-        {/* <h1>Manny & Calvin's React Accordion Demo</h1>
-        <button className="transition delay-150 duration-300" onClick={() => setIsActive(!isActive)}> 
-                {isActive ? '^' : 'v'} 
-        </button>
-        <div ref={contentRef} className="opacity-100 disabled:opacity-0" style={{maxHeight}}>
-           
-            <div className=""> 
-            
-                {item.map(({title, content}) => (<AccordionItem title={title} content={content} /> ))}
-            </div>
-        </div> */}
- <div className="w-full border rounded-md">
+   <div className="w-full border rounded-md">
       <button
         onClick={() => setIsActive(!isActive)}
         className="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 transition-colors font-semibold"
