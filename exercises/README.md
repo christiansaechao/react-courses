@@ -26,6 +26,9 @@
     Todo List
     Add todos, mark them done, and delete them.
 
+    Filter List
+    Filter a list of names by text input.
+
     Simple Calculator
     Two number inputs and a dropdown to add/subtract/multiply/divide.
 
@@ -41,9 +44,6 @@
     Tabs Component
     Create a simple tab switcher that shows different content for each tab.
 
-    Form Validation
-    Build a login form and validate fields before submission (e.g., required fields, email format).
-
     Temperature Converter
     Convert between Celsius and Fahrenheit, with synchronized inputs.
 
@@ -52,11 +52,26 @@
     Stopwatch/Timer
     Start, stop, and reset a timer using useState and setInterval.
 
-    Filter List
-    Filter a list of names by text input.
+    Advanced Theme Toggle
+    Toggle between light and dark themes using useEffect and localStorage.
 
     Lift State Up
     Create multiple input components that update a parent component’s shared state.
 
     Multi-step Form
-    Step-by-step form that saves data between steps and displays a summary at the end.
+    Build a login form and validate fields before submission (e.g., required fields, email format).
+    and the form should save data between steps and displays a summary at the end.
+
+    Context API
+    Use the Context API to share data across multiple components.
+
+    Custom Hooks
+    Implement custom hooks for reusable logic, do one of them:
+    * useFetch
+    * useLocalStorage
+    * useToggle
+    * useDebounce
+
+    WebSockets? 
+
+https://dev.to/arafat4693/15-useful-react-custom-hooks-that-you-can-use-in-any-project-2ll8
