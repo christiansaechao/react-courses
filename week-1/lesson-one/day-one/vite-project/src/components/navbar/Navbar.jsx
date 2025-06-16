@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.css';
-// import appleLogo from "/apple.png";
 
 function Navbar() {
 
@@ -26,13 +25,7 @@ function Navbar() {
   const [links, setLinks] = useState(initialState);
   return (
     <div>
-        <nav className="navbar">
-            <img className="logo" src="https://www.citypng.com/public/uploads/preview/apple-brand-logo-70175169479329782ejsbt0dc.png" alt='appleLogo'></img>
-            <ul>
-              {links.map((item,index)=>(<li key={index}>{item}</li>))}
-            </ul>
-            {links.map(() => <div><MyComponent /></div>)}
-        </nav>
+      test
     </div>
   )
 }

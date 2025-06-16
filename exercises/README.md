@@ -12,6 +12,9 @@
     Toggle Button
     Make a button that toggles between “ON” and “OFF” each time it’s clicked.
 
+    Temperature Converter
+    Convert between Celsius and Fahrenheit, with synchronized inputs.
+
     Show/Hide Text
     Button toggles visibility of a paragraph.
 
@@ -21,6 +24,12 @@
     List Rendering
     Render a list of items (e.g. fruit, colors) using .map().
 
+    Dice Roller
+    Simulate rolling a dice by generating a random number between 1 and 6.
+
+    Simple Calculator
+    Two number inputs and a dropdown to add/subtract/multiply/divide.
+
 # 🟡 Intermediate Exercises (Events, Forms, State, Conditional Rendering)
 
     Todo List
@@ -29,23 +38,14 @@
     Filter List
     Filter a list of names by text input.
 
-    Simple Calculator
-    Two number inputs and a dropdown to add/subtract/multiply/divide.
-
     Dark Mode Toggle
     Toggle a light/dark theme using conditional className and state.
 
     Like Button
     Click to toggle like status and count.
 
-    Accordion Component
-    Show/hide answers to questions when a question is clicked.
-
     Tabs Component
     Create a simple tab switcher that shows different content for each tab.
-
-    Temperature Converter
-    Convert between Celsius and Fahrenheit, with synchronized inputs.
 
 # 🔵 Advanced Practice (Hooks, Component Composition, Data Flow)
 

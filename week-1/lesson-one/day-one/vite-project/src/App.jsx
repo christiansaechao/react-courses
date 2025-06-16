@@ -1,52 +1,41 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import './App.css'
 import ShopItem from './components/shop-items/ShopItem.jsx';
 import Navbar from "./components/navbar/Navbar.jsx"
 import Footer from "./components/footer/footer";
 import Iphone from './components/fathers-day/father-day-iphone-section.jsx';
 import Banner from "./components/banner/first-banner.jsx"
+import { useFetchData } from "../../../../../week-2-hooks/customhooks/useFetchData.js";
+import { useInputValue } from "../../../../../week-2-hooks/customhooks/useInputValue.jsx";
+import { useBooleanIntent } from "../../../../../week-2-hooks/customhooks/booleanValue.js"
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [isOnBannerTab, setIsOnBannerTab] = useState(false);
-  const [pokemonData, setPokemonData] = useState(null);
+  const [isOnBannerTab, setIsOnBannerTab] = useState(false); // number, boolean, string, object, array, data from somewhere
+  const [name, setName] = useState("Sensei Chris");
 
-  const [name, setName] = useState('William Weekes');
+  // custom hooks right here
+  const [inputValue, setInputValue] = useInputValue('');
+  const pokemonData = useFetchData('https://pokeapi.co/api/v2/pokemon/ditto');
 
+  const [booleanValue, invertBoolean] = useBooleanIntent(false);
+  //[variable name, set variable function ]
+  // create your function right here
   function changeName() {
-    setName('Colby');
+    setName(inputValue);
   }
 
-  const addTen = () => {
-    setCount(count + 10);
-  }
-
-  const getPokemon = async () => {
-    try {
-      const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
-      if (data) {
-        setPokemonData(data);
-        console.log(data);
-      }
-    } catch {
-      console.log('error');
-    }
-  }
-
-  React.useEffect(() => {
-    getPokemon();
+  useEffect(() => {
+    setName(booleanValue ? 'Sensei Chris' : 'Sensei Colby');
   }, [])
 
   return (
     <>
-      {console.log(name)}
-      <button onClick={() => addTen()}>Add 10 to count</button>
-      <Navbar />
-      {isOnBannerTab && <Banner />}
-      <ShopItem heading={"Card"} subheading={"Get up to 3% Daily Cash back with every purchase"} buttonText={"Learn more"} />
-      <Iphone />
-      <Footer />
+      {"bool value: " + booleanValue} <br />
+      <input type="text" onChange={(event) => setInputValue(event.target.value)} value={inputValue} />
+      {name} <br />
+      <button onClick={() => changeName()}>Change The Name On The Screen</button> <br />
+      <button onClick={() => invertBoolean()}>{booleanValue ? 'true' : 'false'}</button>
+      <div>Book: Harry Potter [{booleanValue ? 'available' : 'checked out'}]</div>
     </>
   )
 }
