@@ -57,7 +57,7 @@ const TodoApp = () => {
     }
     
     return (
-        <div> 
+        <div>
             <input type="text" value={input} onChange={handleEvent} />
             <button onClick={handleAddTodo}>Add To Do</button>
             <TodoList 

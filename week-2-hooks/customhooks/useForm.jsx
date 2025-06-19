@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import FormProps from './types/form-props';
 
-export const useForm = () => {
+
+export const useForm = (): [FormProps, (e: React.ChangeEvent<HTMLInputElement>) => void]  => {
   const [form, setForm] = useState(initialState);
 
   const handleChange = (e) => {

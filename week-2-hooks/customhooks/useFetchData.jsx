@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 export const useFetchData = (url) => {
   const [data, setData] = useState(null);
+  
   const getData = async () => {
     try {
       const { data } = await axios.get(url);
