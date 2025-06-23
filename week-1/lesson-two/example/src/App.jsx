@@ -47,12 +47,6 @@ function App() {
     return searchedCard && typeCard && rarityCard;
   });
 
-  // const filteredCards = React.useMemo(() => {
-  //   return cards.filter((card) =>
-  //     card.name.toLowerCase().includes(search.toLowerCase())
-  //   );
-  // }, [search, selectedType, selectedRarity]);
-
   return (
     <>
       <Search search={search} setSearch={setSearch} />
