@@ -1,0 +1,38 @@
+{
+  "buns": [
+    { "id": 1, "name": "Sesame Bun", "price": 1.0 },
+    { "id": 2, "name": "Brioche Bun", "price": 1.5 },
+    { "id": 3, "name": "Whole Wheat Bun", "price": 1.2 },
+    { "id": 4, "name": "Gluten-Free Bun", "price": 1.8 }
+  ],
+  "patties": [
+    { "id": 1, "name": "Beef Patty", "price": 3.0 },
+    { "id": 2, "name": "Chicken Patty", "price": 2.5 },
+    { "id": 3, "name": "Veggie Patty", "price": 2.0 },
+    { "id": 4, "name": "Beyond Meat Patty", "price": 3.5 }
+  ],
+  "cheeses": [
+    { "id": 1, "name": "Cheddar", "price": 0.75 },
+    { "id": 2, "name": "Swiss", "price": 0.85 },
+    { "id": 3, "name": "American", "price": 0.65 },
+    { "id": 4, "name": "Pepper Jack", "price": 0.9 }
+  ],
+  "toppings": [
+    { "id": 1, "name": "Lettuce", "price": 0.3 },
+    { "id": 2, "name": "Tomato", "price": 0.4 },
+    { "id": 3, "name": "Onions", "price": 0.3 },
+    { "id": 4, "name": "Pickles", "price": 0.3 },
+    { "id": 5, "name": "Jalapeños", "price": 0.4 },
+    { "id": 6, "name": "Grilled Mushrooms", "price": 0.5 },
+    { "id": 7, "name": "Bacon", "price": 1.2 },
+    { "id": 8, "name": "Avocado", "price": 1.0 }
+  ],
+  "sauces": [
+    { "id": 1, "name": "Ketchup", "price": 0.2 },
+    { "id": 2, "name": "Mustard", "price": 0.2 },
+    { "id": 3, "name": "Mayo", "price": 0.25 },
+    { "id": 4, "name": "BBQ Sauce", "price": 0.3 },
+    { "id": 5, "name": "Spicy Aioli", "price": 0.4 },
+    { "id": 6, "name": "Ranch", "price": 0.35 }
+  ]
+}

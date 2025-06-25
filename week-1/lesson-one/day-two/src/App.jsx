@@ -4,8 +4,6 @@ import ListItems from './component/list-items/ListItems'
 import Accordion from './component/Accordion';
 import Stopwatch from './component/Stopwatch';
 
-
-
 const accordionData = [
     {
     title: "Section 1", 

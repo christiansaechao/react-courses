@@ -5,7 +5,7 @@ import PokemonCard from "./components/pokemon-card";
 import Search from "./components/search";
 
 function App() {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState('');
   const [search, setSearch] = useState("");
   const [selectedRarity, setSelectedRarity] = useState("");
   const [selectedType, setSelectedType] = useState("");
