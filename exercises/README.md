@@ -35,13 +35,13 @@
     Todo List
     Add todos, mark them done, and delete them.
 
-    Filter List
+    Filter List (.filter()) -> filter method 
     Filter a list of names by text input.
 
-    Dark Mode Toggle
+    Dark Mode Toggle (conditional rendering, state, event handlers)
     Toggle a light/dark theme using conditional className and state.
 
-    Like Button
+    Like Button (conditional rendering, state, event handlers)
     Click to toggle like status and count.
 
     Tabs Component
@@ -50,10 +50,15 @@
 # 🔵 Advanced Practice (Hooks, Component Composition, Data Flow)
 
     Stopwatch/Timer
-    Start, stop, and reset a timer using useState and setInterval.
+    Start, stop, and reset a timer using useState and setInterval, clearInterval
 
     Advanced Theme Toggle
-    Toggle between light and dark themes using useEffect and localStorage.
+    Toggle between light and dark themes using useEffect and localStorage
+
+    The first page load
+    useEffect(() => {
+
+    }, []);
 
     Lift State Up
     Create multiple input components that update a parent component’s shared state.
@@ -61,9 +66,6 @@
     Multi-step Form
     Build a login form and validate fields before submission (e.g., required fields, email format).
     and the form should save data between steps and displays a summary at the end.
-
-    Context API
-    Use the Context API to share data across multiple components.
 
     Custom Hooks
     Implement custom hooks for reusable logic, do one of them:

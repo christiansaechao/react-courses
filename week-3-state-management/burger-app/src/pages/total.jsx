@@ -1,5 +1,5 @@
 import React from "react";
-import burgerStore from "../store/Store";
+import burgerStore from "../store/burger-store";
 
 const Total = () => {
   const { ingredients, totalPrice } = burgerStore((state) => state.Burger);

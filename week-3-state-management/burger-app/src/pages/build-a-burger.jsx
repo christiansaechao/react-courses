@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import burgerStore from "../store/Store";
+import burgerStore from "../store/burger-store";
 const BuildABurger = () => {
   const [burgerIngredients, setBurgerIngredients] = useState(null);
   const { addIngredients, removeIngredients } = burgerStore();

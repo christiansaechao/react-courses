@@ -5,11 +5,13 @@ function Navbar() {
     return (
         <>
             <nav className="navbar flex flex-row items-center justify-between gap-10 w-full
-            text-orange-400 bg-lime-900 px-8">
+            text-[#ebe6e0] bg-[#4e4231] px-8">
                 <Hamburger />
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/build">Build a burger</NavLink>
-                <NavLink to="/total">Total</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/">Home</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/cart">Cart</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/build">Build a burger</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/total">Total</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/burger-display">Burger Display</NavLink>
             </nav>
         </>
     )
