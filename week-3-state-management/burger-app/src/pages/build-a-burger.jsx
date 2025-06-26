@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import burgerStore from "../store/burger-store";
+
 const BuildABurger = () => {
   const [burgerIngredients, setBurgerIngredients] = useState(null);
   const { addIngredients, removeIngredients } = burgerStore();
@@ -23,11 +24,11 @@ const BuildABurger = () => {
   };
   
   return (
-    <div className="flex gap-7 m-5 w-full">
+    <div className="flex flex-wrap justify-center items-center gap-7 w-full overflow-y-auto h-full no-scrollbar p-6">
       {burgerIngredients?.map(([category, burgerIngredients], index) => (
         <div
           key={index}
-          className="border border-black border-3 rounded rounded-xl "
+          className="border border-black border-3 rounded rounded-xl w-full"
         >
           <h2 className="font-extrabold border-b mb-2">{category}</h2>
           <div className="">
@@ -37,9 +38,9 @@ const BuildABurger = () => {
                   <h3 className="font-bold">{item.name}</h3>
                   <span className="italic px-2">${item.price}</span>
                 </div>
-                <div className="flex justify-end">
-                  <button onClick={() => addToCart(item)}>Add</button>
-                  <button onClick={() => removeFromCart(item)}>Remove</button>
+                <div className="flex justify-around p-3 gap-4">
+                  <button className="w-1/2" onClick={() => addToCart(item)}>Add</button>
+                  <button className="w-1/2" onClick={() => removeFromCart(item)}>Remove</button>
                 </div>
               </div>
             ))}

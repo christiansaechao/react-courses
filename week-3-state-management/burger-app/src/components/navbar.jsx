@@ -4,8 +4,8 @@ import { Hamburger } from 'lucide-react';
 function Navbar() {
     return (
         <>
-            <nav className="navbar flex flex-row items-center justify-between gap-10 w-full
-            text-[#ebe6e0] bg-[#4e4231] px-8">
+            <nav className="navbar flex flex-row items-center justify-between p-2 w-full
+            text-[#ebe6e0] bg-[#4e4231]">
                 <Hamburger />
                 <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/">Home</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/cart">Cart</NavLink>
