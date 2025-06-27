@@ -8,10 +8,10 @@ function Navbar() {
             text-[#ebe6e0] bg-[#4e4231]">
                 <Hamburger />
                 <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/">Home</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/cart">Cart</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/build">Build a burger</NavLink>
-                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/total">Total</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/burger-display">Burger Display</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/build">Customize</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/cart">Cart</NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-orange-400' : '')} to="/total">Total</NavLink>
             </nav>
         </>
     )

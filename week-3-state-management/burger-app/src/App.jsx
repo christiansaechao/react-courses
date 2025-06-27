@@ -1,9 +1,9 @@
 import "./App.css";
 import Home from "./pages/home/home.jsx";
 import Total from "./pages/Total";
-import BurgerDisplayPage from "./pages/burger-display-page.jsx";
-import BuildABurger from "./pages/build-a-burger";
-import Navbar from "./components/navbar.jsx";
+import BurgerDisplayPage from "@/pages/burger-display-page.jsx";
+import BuildABurger from "@/pages/customize/customize.jsx";
+import Navbar from "@/components/navbar.jsx";
 import Cart from "@/pages/cart/cart.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

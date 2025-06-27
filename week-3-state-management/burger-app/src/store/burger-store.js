@@ -1,16 +1,26 @@
 import { create } from "zustand";
+import BurgerModel from "@/models/burgerModel";
 // cart number of ingredients
 // figure out the total price
 // function getTotalHamburgerPrice
-// const ingredients = await fetch("/ingrediants.json");
+// const ingredients = await fetch("/ingrediants.json")
 
 const initialState = {
-  ingredients: [],
+  burgers: [],
   totalPrice: 0,
+  currentBurger: undefined,
 };
 
 const burgerStore = create((set) => ({
   Burger: initialState,
+  addBurger:({ newburger })=>
+    set((state)=>({
+      Burger:{
+        Burgers:[...state.Burger.burgers, newburger],
+        totalPrice: state.Burger.totalPrice + newburger.price,
+        currentBurger: newburger,
+      },
+  })),
   addIngredients: ({ name, price }) =>
     set((state) => ({
       Burger: {

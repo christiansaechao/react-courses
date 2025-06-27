@@ -3,6 +3,10 @@ import BurgerIcon from "@/components/burgerIcon";
 
 const BurgerDisplayPage = () => {
   const [count, setCount] = React.useState(0);
+
+
+  
+  // Change application navigation state.
   return (
     <>
       <div className="flex flex-col items-center justify-between h-full p-6">
