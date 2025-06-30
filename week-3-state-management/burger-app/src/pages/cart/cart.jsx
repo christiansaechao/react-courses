@@ -3,20 +3,25 @@ import PageHeader from "@/components/page-header";
 import GenericCards from "@/components/generic-cards";
 import Total from "../Total";
 import axios from "axios";
-//import navStore from "@/store/nav-store.js";
+import BurgerCards from "@/components/burger-cards"
 import burgerStore from "../../store/burger-store";
-// import { loadStripe } from "@stripe/stripe-js";
+//import navStore from "@/store/nav-store.js";
+
 
 const Cart = () => {
+  const burgers = burgerStore((state) => state.Burger.burgers)
   const PUBLISH_KEY = import.meta.env.PUBLISH_KEY;
   const { totalPrice } = burgerStore((state) => state.Burger);
   const endpoint = "http://localhost:3000/checkout-session";
+
   async function payment(totalPrice) {
-    // const stripe = await loadStripe(PUBLISH_KEY);
     try {
+      console.log("Step1");
       const res = await axios.post(endpoint, {
         amount: totalPrice,
       });
+      console.log("Step2");
+      console.log(res);
       window.location.href=res.data.url
       console.log(res);
     } catch (error) {
@@ -28,44 +33,14 @@ const Cart = () => {
     <div className="p-6">
       <PageHeader pageTitle="Cart" showHeader={true} />
       <div className="flex flex-col gap-4">
-        <GenericCards>
-          <div className="flex justify-between items-center p-6">
-            <div className="h-20 flex justify-between items-start flex-col">
-              <h2 className="text-start font-semibold italic">
-                Classic <br />
-                Cheeseburger
-              </h2>
-              <p>$8.99</p>
-            </div>
-            <div className="w-20">
-              <img
-                src="https://thumbs.dreamstime.com/b/burger-icon-bbq-restaurant-fsas-food-grill-bar-cheeseburger-hamburger-vector-emblem-fast-menu-barbecue-sign-sesame-356232639.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </GenericCards>
-
-        <GenericCards>
-          <div className="flex justify-between items-center p-6">
-            <div className="h-20 flex justify-between items-start flex-col">
-              <h2 className="text-start font-semibold italic">
-                Classic <br />
-                Cheeseburger
-              </h2>
-              <p>$8.99</p>
-            </div>
-            <div className="w-20">
-              <img
-                src="https://thumbs.dreamstime.com/b/burger-icon-bbq-restaurant-fsas-food-grill-bar-cheeseburger-hamburger-vector-emblem-fast-menu-barbecue-sign-sesame-356232639.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </GenericCards>
+        {burgers.map(( burger )=>{
+          return (
+            <BurgerCards burgerInfo = {burger} />
+          )
+        })}
       </div>
       <Total />
-      <button onClick={() => payment(50000)}> PAY NOW! </button>
+      <button onClick={() => payment(Number(totalPrice * 100))}> PAY NOW! </button>
     </div>
   );
 };

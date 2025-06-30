@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import BurgerModel from "@/models/burgerModel";
 // cart number of ingredients
 // figure out the total price
 // function getTotalHamburgerPrice
@@ -9,18 +8,19 @@ const initialState = {
   burgers: [],
   totalPrice: 0,
   currentBurger: undefined,
+  ingredients: [],
 };
 
 const burgerStore = create((set) => ({
   Burger: initialState,
-  addBurger:({ newburger })=>
-    set((state)=>({
-      Burger:{
-        Burgers:[...state.Burger.burgers, newburger],
+  addBurger: (newburger) =>
+    set((state) => ({
+      Burger: {
+        burgers: [...state.Burger.burgers, newburger],
         totalPrice: state.Burger.totalPrice + newburger.price,
         currentBurger: newburger,
       },
-  })),
+    })),
   addIngredients: ({ name, price }) =>
     set((state) => ({
       Burger: {
@@ -32,7 +32,7 @@ const burgerStore = create((set) => ({
     set((state) => {
       const index = state.Burger.ingredients.indexOf(name);
       const array = state.Burger.ingredients;
-      
+
       if (index > -1) {
         array.splice(index, 1);
       }

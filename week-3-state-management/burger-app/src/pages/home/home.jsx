@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PageHeader from "@/components/page-header";
 import GenericCards from "@/components/generic-cards";
 import burgerStore from "@/store/burger-store.js";
-import BurgerModel from "@/models/burgerModel.js";
+import BurgerCards from "../../components/burger-cards";
 //import navStore from "@/store/nav-store";
-
-// The home page of the burger app
 
 const Home = () => {
   const { addBurger } = burgerStore((state) => state.Burger);
+  const [burgers, setBurgers] = useState();
+
+  async function fetchData() {
+    const response = await fetch("/burgers.json");
+    const data = await response.json();
+    setBurgers(data);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className="p-5 pt-0 overflow-y-auto h-full no-scrollbar ">
@@ -25,40 +34,10 @@ const Home = () => {
       <h2 className="text-[#ebe6e0] text-center from-bold font-mono text-3xl rounded-md bg-gradient-to-t from-orange-500 via-[#d49c67] to-[#8d7658]">
         Popular
       </h2>
-      <div className="flex flex-col gap-4">
-        <GenericCards>
-          <div className="flex justify-between items-center p-6">
-            <h2 className="text-start from-bold font-mono text-[#4e4231]">
-              The <br />
-              Original
-            </h2>
-            <div className="flex ">
-              <button
-                className="bg-orange-500 text-[#ebe6e0] static absolute right-0"
-                onClick={() => addBurger(new BurgerModel())}>
-                <span className="text-x">Add To Cart</span>
-              </button>
-            </div>
-            <p className="font-italic text-[#4e4231]">4.99</p>
-          </div>
-        </GenericCards>
-
-        <GenericCards>
-          <div className="flex justify-between items-center p-6">
-            <h2 className="text-start from-bold font-mono text-[#4e4231]">
-              Classic <br />
-              Cheeseburger
-            </h2>
-            <div className="flex flex-col gap-2">
-              <p className="font-italic text-[#4e4231]">$8.99</p>
-              <button
-                className="bg-orange-500 text-[#ebe6e0] h-4 p-0 flex items-center"
-                onClick={() => addBurger()}>
-                <span className="text-x">Add to cart</span>
-              </button>
-            </div>
-          </div>
-        </GenericCards>
+      <div className="flex flex-col gap-4 py-4">
+        {burgers?.map((burger) => {
+          return <BurgerCards burgerInfo={burger} addBurger={addBurger} />;
+        })}
       </div>
     </div>
   );

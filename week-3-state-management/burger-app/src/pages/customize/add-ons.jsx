@@ -17,11 +17,11 @@ const AddOns = ({ burgerIngredients, addToCart, removeFromCart }) => {
                   <span className="italic px-2">${item.price}</span>
                 </div>
                 <div className="flex justify-around p-3 gap-4">
-                  <button className="w-1/2" onClick={() => addToCart(item)}>
+                  <button className="w-1/2 bg-black" onClick={() => addToCart(item)}>
                     Add
                   </button>
                   <button
-                    className="w-1/2"
+                    className="w-1/2 bg-black"
                     onClick={() => removeFromCart(item)}
                   >
                     Remove

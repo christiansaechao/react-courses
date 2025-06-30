@@ -11,10 +11,10 @@ const SelectSize = () => {
   return (
     <>
       <div className="flex flex-col">
-        <h2>Pick a Size</h2>
+        <h2 className="text-xl font-semibold text-gray-800">Choose your Size</h2>
         {sizeOptions.map((option) => (
         <>
-         <div className="flex w-full">
+         <div className="flex flex-col">
             <div className='flex-row'>
               <h3>{option.name}</h3>
               <span>{option.price}</span>

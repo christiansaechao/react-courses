@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cheeseburger",
+    "description": "Juicy beef patty topped with cheddar, lettuce, tomato, onion, and our house sauce.",
+    "price": 8.99,
+    "image": "/images/classic-cheeseburger.jpg",
+    "ingredients": [
+      "beef patty",
+      "cheddar",
+      "lettuce",
+      "tomato",
+      "onion",
+      "house sauce",
+      "bun"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bacon BBQ Burger",
+    "description": "Crispy bacon, tangy BBQ sauce, and smoky gouda over a flame-grilled patty.",
+    "price": 10.49,
+    "image": "/images/bacon-bbq-burger.jpg",
+    "ingredients": [
+      "beef patty",
+      "bacon",
+      "BBQ sauce",
+      "smoked gouda",
+      "onion rings",
+      "bun"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Spicy Jalapeño Burger",
+    "description": "Fiery jalapeños, pepper jack cheese, and chipotle mayo for a bold kick.",
+    "price": 9.99,
+    "image": "/images/spicy-jalapeno-burger.jpg",
+    "ingredients": [
+      "beef patty",
+      "jalapeños",
+      "pepper jack",
+      "chipotle mayo",
+      "lettuce",
+      "bun"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Veggie Delight Burger",
+    "description": "A hearty black bean patty with avocado, sprouts, and vegan garlic aioli.",
+    "price": 8.49,
+    "image": "/images/veggie-burger.jpg",
+    "ingredients": [
+      "black bean patty",
+      "avocado",
+      "sprouts",
+      "vegan garlic aioli",
+      "lettuce",
+      "bun"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Mushroom Swiss Burger",
+    "description": "Sautéed mushrooms and creamy Swiss cheese for a rich, savory flavor.",
+    "price": 9.25,
+    "image": "/images/mushroom-swiss-burger.jpg",
+    "ingredients": [
+      "beef patty",
+      "mushrooms",
+      "Swiss cheese",
+      "onions",
+      "garlic aioli",
+      "bun"
+    ]
+  }
+]
